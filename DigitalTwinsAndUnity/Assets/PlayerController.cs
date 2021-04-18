@@ -12,12 +12,12 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            Ray ray = cam.ScreenPointToRay(Input.mousePosition);
-            RaycastHit;
+            //Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+            //RaycastHit;
             
-            if(Physics.Raycast(ray, out hit))
+            //if(Physics.Raycast(ray, out hit))
             {
-                agent.SetDestintion(hit.point);
+                //agent.SetDestintion(hit.point);
             }
         }
         
