@@ -5,13 +5,18 @@ public class VehicleController : MonoBehaviour
 {
     public Camera cam;
     public NavMeshAgent agent;
+     //public float goalDistance = 40f;
 
     // Start is called before the first frame update
-   /* void Start()
+  /* void Start()
     {
-        
-    }
-   */
+       
+
+       Vector3 target = transform.position + Vector3.forward * goalDistance;
+       agent.SetDestination(target);
+
+    }*/
+   
 
     // Update is called once per frame
     void Update()
