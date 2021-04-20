@@ -632,6 +632,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2024268832744186679, guid: 1095ffb649b58cc448f354c72ad7ca56,
         type: 3}
+      propertyPath: m_SelectedVertices.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1316290179488086162, guid: 3fc0a495211b03343bec8c95ce8d696b,
+        type: 3}
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 677581659}
@@ -3062,8 +3067,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7311548304627828574, guid: 9a82bb16f2d2c1a4f8aaa28ddb634a5b,
         type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+      propertyPath: m_Layer
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 7311548304627828578, guid: 9a82bb16f2d2c1a4f8aaa28ddb634a5b,
         type: 3}
