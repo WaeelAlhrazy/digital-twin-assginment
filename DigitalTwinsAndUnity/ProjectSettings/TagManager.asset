@@ -16,10 +16,10 @@ TagManager:
   - PostProcessing
   - VehicleLayer
   - PedestrianLayer
-  - BicycleLayer
-  - 
-  - 
-  - 
+  - Bicycle1Layer
+  - Bicycle2
+  - Bicycle
+  - Cycle1
   - 
   - 
   - 
