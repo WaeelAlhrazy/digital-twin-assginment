@@ -20,10 +20,10 @@ public class VehicleManager : MonoBehaviour
     public NavMeshAgent prefabC;
     public NavMeshAgent prefabD;
 
-    private NavMeshAgent agentA;
-    private NavMeshAgent agentB;
-    private NavMeshAgent agentC;
-    private NavMeshAgent agentD;
+    private GameObject vehicle1;
+    private GameObject vehicle2;
+    private GameObject vehicle3;
+    private GameObject vehicle4;
 
     public static int cycle = 0;
 
@@ -36,10 +36,10 @@ public class VehicleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        CheckVehicleArrival(agentA, entryA);
-        CheckVehicleArrival(agentB, entryB);
-        CheckVehicleArrival(agentC, entryC);
-        CheckVehicleArrival(agentD, entryD);
+        // CheckVehicleArrival(agentA, entryA);
+        // CheckVehicleArrival(agentB, entryB);
+        // CheckVehicleArrival(agentC, entryC);
+        // CheckVehicleArrival(agentD, entryD);
     }
 
     void InitialVehicleInstatiation (){
@@ -54,22 +54,22 @@ public class VehicleManager : MonoBehaviour
         agentD.destination = exitD.position;
     }
 
-    void CheckVehicleArrival(NavMeshAgent agent, Transform entry){
-        if (agent){
-            if (!agent.pathPending){
-                if (agent.remainingDistance <= agent.stoppingDistance)
-                {
-                    if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
-                    {
-                        // Done
-                        Debug.Log("Hello, erdha une!");
-                        Destroy(agent);
-                        InstantiateVehicle(entry);
-                    }
-                }
-            }
-        }
-    }
+    // void CheckVehicleArrival(NavMeshAgent agent, Transform entry){
+    //     if (agent){
+    //         if (!agent.pathPending){
+    //             if (agent.remainingDistance <= agent.stoppingDistance)
+    //             {
+    //                 if (!agent.hasPath || agent.velocity.sqrMagnitude == 0f)
+    //                 {
+    //                     // Done
+    //                     Debug.Log("Hello, erdha une!");
+    //                     Destroy(agent);
+    //                     InstantiateVehicle(entry);
+    //                 }
+    //             }
+    //         }
+    //     }
+    // }
 
     void InstantiateVehicle(Transform entry){
         var prefab = PickRandomPrefab();
@@ -96,4 +96,12 @@ public class VehicleManager : MonoBehaviour
 
          return prefabB;
     }
+
+    void OnCollisionEnter(Collision c) {
+        if(c.collider.tag == "ExitA"){
+             Debug.Log("Hello, ku je?!");
+            Destroy(agentA);
+        }
+    }
+
 }
