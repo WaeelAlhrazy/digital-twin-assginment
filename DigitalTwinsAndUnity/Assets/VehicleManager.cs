@@ -20,10 +20,10 @@ public class VehicleManager : MonoBehaviour
     public NavMeshAgent prefabC;
     public NavMeshAgent prefabD;
 
-    private GameObject vehicle1;
-    private GameObject vehicle2;
-    private GameObject vehicle3;
-    private GameObject vehicle4;
+    private NavMeshAgent agentA;
+    private NavMeshAgent agentB;
+    private NavMeshAgent agentC;
+    private NavMeshAgent agentD;
 
     public static int cycle = 0;
 
