@@ -5,7 +5,6 @@ using UnityEngine.AI;
 public class VehicleController : MonoBehaviour
 {
     public GameObject vehicle;
-    // public NavMeshAgent agent;
 
     // Start is called before the first frame update
     void Start()
@@ -19,7 +18,7 @@ public class VehicleController : MonoBehaviour
         
     }
 
-     void OnCollisionEnter(Collision c) {
+    void OnCollisionEnter(Collision c) {
         if(c.collider.tag == "Exit"){
             Destroy(vehicle);
         }

@@ -530,8 +530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8f51aa1a5a152dd458cf178a155f84a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cam: {fileID: 0}
-  agent: {fileID: 8461505567885327197}
+  bicycle: {fileID: 8461505567885327186}
 --- !u!195 &8461505567885327197
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -541,7 +540,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 8461505567885327186}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 1
   m_Speed: 3.5
   m_Acceleration: 8
   avoidancePriority: 50
